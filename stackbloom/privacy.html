@@ -20,50 +20,65 @@
 <div class="lang"><a href="#ko">한국어</a><a href="#en">English</a></div>
 <section id="ko">
 <h1>개인정보처리방침</h1>
-<p class="meta">시행일: 2026년 11월 11일</p>
-<p>Mungmung Games(이하 "개발자")는 모바일 게임 <strong>Stack Bloom</strong>(이하 "앱")을 만들고 운영합니다. 이 방침은 앱이 어떤 정보를 다루는지, 왜 다루는지, 이용자가 무엇을 할 수 있는지 설명합니다.</p>
+<p class="meta">시행일: 2026년 11월 15일</p>
+<p>Mungmung Games(이하 "개발자")는 모바일 게임 <strong>Stack Bloom</strong>(이하 "앱")을 만들고 운영합니다. 이 방침은 기기에 저장되는 게임 데이터와 분석·광고·구매를 위해 처리되는 정보, 이용자의 선택을 설명합니다.</p>
 
-<h2>1. 개발자가 직접 모으는 정보</h2>
-<p>개발자는 이용자의 개인정보를 직접 모으지 않습니다. 앱에는 회원가입, 로그인, 결제 기능이 없습니다.</p>
-<p>앱은 다음 게임 데이터를 <strong>이용자 기기 안에만</strong> 저장합니다. 이 데이터는 개발자에게 전송되지 않습니다.</p>
+<h2>1. 앱 이용과 기기 저장 데이터</h2>
+<p>앱에는 회원가입이나 로그인이 없습니다. 개발자의 앱은 계정 이메일·이름이나 카드번호 같은 원본 결제정보를 수집하지 않습니다. 다만 아래에 설명하는 설치 식별자, 이용 통계, 광고 및 구매 관련 정보가 처리되므로 모든 정보가 완전히 익명이거나 아무 정보도 수집되지 않는 것은 아닙니다.</p>
+<p>도달 레벨, 도전 기록, 배지, 아이템 수, 설정과 광고 제거 구매 권한 등은 기기에 저장합니다. 게임 세이브 전체를 자동으로 클라우드 동기화하지는 않지만, 일부 진행·플레이 통계는 아래 분석 서비스로 전송합니다.</p>
+
+<h2>2. Firebase Analytics: 게임 분석</h2>
+<p>Google Analytics for Firebase(Google LLC, Firebase Unity SDK 14.1.0; iOS Analytics SDK 13.1.1)를 이용해 난이도와 게임 품질을 개선합니다. 광고 제공 목적의 AdMob 처리와는 구분됩니다.</p>
 <ul>
-<li>도달한 레벨, 오늘의 도전 기록, 배지 수</li>
-<li>보유한 아이템 개수, 무료 아이템 지급 여부</li>
-<li>설정 값(효과 줄이기 등)</li>
+<li><strong>플레이 통계:</strong> 레벨 시작·완료·실패·포기, 게임 모드·레벨, 플레이 시간, 이동 횟수, 도달 레벨, 시도·재시도 횟수, 목표 달성도·별, 부스터 보유·사용, 보상형 광고 결과 등.</li>
+<li><strong>환경·SDK 정보:</strong> 테스트/정식 배포 채널(test/live), 앱 인스턴스 ID(설치 식별자), 앱 버전, 기기·운영체제 정보, 세션·앱 상호작용, IP 주소를 바탕으로 추정되는 대략적인 위치 등. SDK가 자동 구매 이벤트를 처리할 수도 있습니다.</li>
+</ul>
+<p>앱 인스턴스 ID는 분석용 설치 식별자이며 광고 ID와 다릅니다. Firebase Analytics의 Android 광고 ID 수집은 꺼져 있고, 동의 모드의 <code>ad_storage</code>, <code>ad_user_data</code>, <code>ad_personalization</code>은 항상 거부로 설정합니다. Analytics와 AdMob 계정도 연결하지 않습니다. 이 제한이 별도 AdMob 광고 SDK의 정보 처리까지 중단하는 것은 아닙니다.</p>
+<p>앱은 Firebase Crashlytics나 Remote Config를 사용하지 않으며, 정밀 GPS 위치를 수집하지 않습니다.</p>
+
+<h2>3. AdMob: 보상형·전면 광고</h2>
+<p>앱은 Google AdMob의 보상형 광고와 레벨 클리어 후 이동 시 조건에 따라 표시되는 전면 광고를 사용합니다. 보상형 광고는 이용자가 선택해 시청합니다. 광고 SDK는 광고를 미리 요청·로드할 때도 정보를 처리할 수 있습니다.</p>
+<ul>
+<li>광고 식별자(Android 광고 ID, 허용된 경우 iOS IDFA)</li>
+<li>IP 주소와 이를 바탕으로 한 대략적인 위치, 앱·기기·운영체제 정보</li>
+<li>광고 노출·시청·클릭 등 앱 상호작용과 진단 정보</li>
+</ul>
+<p><strong>목적:</strong> 광고 제공, 광고 성과 측정·분석, 부정 사용 방지. 맞춤형 광고와 광고 식별자 사용은 필요한 동의 및 플랫폼 설정에 따릅니다. iOS에서 추적을 허용하지 않으면 IDFA를 사용하지 않습니다.</p>
+
+<h2>4. 광고 제거 구매</h2>
+<p>Unity IAP를 통해 Apple App Store 또는 Google Play에서 유료 비소모성 "광고 제거" 상품을 구매할 수 있습니다. 이 상품은 전면 광고를 제거하며, 선택형 보상형 광고는 남습니다.</p>
+<p>스토어와 결제 SDK는 구매·복원을 위해 상품 ID, 거래·영수증 및 구매 상태 등 구매 정보를 처리합니다. 앱은 이 정보를 기기에서 처리하여 구매 권한을 부여·복원하며, 개발자의 별도 서버로 영수증을 보내 검증하지 않습니다. 결제는 스토어가 처리하므로 개발자의 앱은 계정 이메일·이름이나 원본 카드정보를 받지 않습니다. Firebase SDK가 자동으로 처리하는 구매 이벤트는 위 분석 설명에 포함됩니다.</p>
+
+<h2>5. 동의와 선택</h2>
+<ul>
+<li><strong>통계 전송:</strong> 앱 설정의 "통계 전송"은 기본값이 켜짐이며, 언제든 끄면 Firebase Analytics 수집을 중단합니다. 꺼도 게임 기능에 불이익이 없습니다. 이 스위치는 광고 SDK나 스토어 구매 처리를 끄는 기능은 아닙니다.</li>
+<li><strong>지역별 동의:</strong> 앱 시작 시 Google UMP의 동의 확인 절차 후 지역 및 동의 상태에 따라 <code>analytics_storage</code>만 허용할 수 있습니다. GDPR 적용 지역에서는 기기 저장·접근 목적과 Google에 대한 동의가 있어야 허용하며, 동의 상태를 확인하지 못하면 저장을 허용하지 않습니다.</li>
+<li><strong>저장 동의와 수집 중단의 차이:</strong> <code>analytics_storage</code> 거부는 분석 식별자 저장을 제한하는 동의 모드입니다. "통계 전송" 끄기와 같지 않으며, 저장 동의 거부만으로 모든 네트워크 전송이 0이 된다고 보장하지 않습니다.</li>
+<li><strong>광고 동의:</strong> 필요한 지역에서는 UMP 동의 화면이 제공됩니다. 선택에 따라 광고 요청이 제한되거나 제한된 광고가 제공될 수 있으며, 거부하면 항상 비맞춤형 광고가 나온다고 보장하지 않습니다.</li>
+<li><strong>기기 설정:</strong> iOS의 추적 허용 설정과 Android의 광고 ID 재설정·삭제 등 플랫폼 개인정보 설정으로 광고 식별자 사용을 관리할 수 있습니다. 광고 관련 선택이나 동의 변경에 관한 문의는 아래 이메일로 보내 주세요.</li>
 </ul>
 
-<h2>2. 광고와 제3자가 처리하는 정보</h2>
-<p>앱은 Google AdMob(Google LLC)으로 보상형 광고를 보여 줍니다. 이용자가 광고를 보면 Google이 다음 정보를 처리할 수 있습니다.</p>
-<ul>
-<li>광고 식별자(Android 광고 ID, iOS IDFA — 이용자가 허용한 경우)</li>
-<li>IP 주소와 이를 바탕으로 한 대략적인 위치</li>
-<li>기기 종류, 운영체제, 앱 버전 같은 기기 정보</li>
-<li>광고 노출·시청·클릭 기록</li>
-</ul>
-<p><strong>목적:</strong> 광고 제공, 광고 성과 측정, 부정 사용 방지, (동의한 경우) 맞춤형 광고.</p>
-<p><strong>국외 이전:</strong> 이 정보는 Google의 서버(미국 등)로 전송되어 처리됩니다. 처리와 보관 기간은 Google의 정책을 따릅니다.<br>
-<a href="https://policies.google.com/privacy">Google 개인정보처리방침</a> · <a href="https://policies.google.com/technologies/partner-sites">Google이 파트너 앱의 정보를 사용하는 방법</a></p>
+<h2>6. 보관과 삭제</h2>
+<p>Firebase Analytics의 사용자·이벤트 수준 데이터 보존 기간은 <strong>14개월</strong>로 설정하며, 새 활동이 발생하면 사용자 데이터 보존 기간이 재설정됩니다. 이 설정은 집계 보고서의 보관 기간과 다를 수 있습니다. 광고 데이터와 스토어 구매·영수증 정보는 각각 해당 제공자의 별도 보관 정책을 따릅니다.</p>
+<p>앱 삭제로 기기에 저장된 앱 데이터를 제거할 수 있으나, 플랫폼 백업·구매 복원으로 일부 정보가 복원될 수 있습니다. 통계 전송을 끄거나 앱을 삭제해도 이미 전송된 분석·광고 기록이나 스토어 거래 기록이 즉시 삭제되는 것은 아닙니다. 삭제 등 권리 요청은 아래 연락처로 문의할 수 있으며, 처리 가능한 범위와 제공자 절차를 안내합니다.</p>
 
-<h2>3. 동의와 선택</h2>
+<h2>7. 서비스 제공자, 국외 처리와 보안</h2>
+<p>Google은 Firebase Analytics와 AdMob을, Apple과 Google은 각 앱 스토어의 결제·구매 복원을 처리합니다. Unity IAP는 스토어 결제 연동에 사용됩니다. 이 과정에서 관련 정보는 미국 등 국외 서버로 전송·처리될 수 있습니다. 전송에는 TLS 등 암호화 연결을 사용하며, 제공자별 처리·보관 방식은 각 정책을 참고해 주세요.</p>
 <ul>
-<li>유럽경제지역(EEA), 영국, 스위스 이용자에게는 앱을 처음 실행할 때 광고 동의 화면이 나옵니다. 동의하지 않으면 비맞춤형 광고가 나옵니다.</li>
-<li>iOS에서는 앱 추적 허용 여부를 묻습니다. 허용하지 않으면 광고 식별자를 쓰지 않습니다.</li>
-<li>Android에서는 기기 설정 &gt; 개인정보 보호 &gt; 광고에서 광고 ID를 재설정하거나 삭제할 수 있습니다.</li>
-<li>광고는 이용자가 버튼을 눌렀을 때만 나옵니다. 광고를 보지 않아도 게임을 할 수 있습니다.</li>
+<li><a href="https://policies.google.com/privacy">Google 개인정보처리방침</a> · <a href="https://policies.google.com/technologies/partner-sites">Google이 파트너 앱의 정보를 사용하는 방법</a></li>
+<li><a href="https://www.apple.com/legal/privacy/">Apple 개인정보처리방침</a></li>
+<li><a href="https://unity.com/legal/privacy-policy">Unity 개인정보처리방침</a></li>
 </ul>
 
-<h2>4. 보관과 삭제</h2>
-<p>기기 안의 게임 데이터는 앱을 삭제하면 함께 지워집니다. 개발자는 이 데이터를 따로 보관하지 않습니다. Google이 처리한 정보는 Google의 정책에 따라 보관하고 파기합니다.</p>
+<h2>8. 아동</h2>
+<p>앱은 만 13세 미만 아동을 주 대상으로 하지 않습니다. 아동의 정보 처리에 관한 우려나 문의가 있으면 아래로 연락해 주세요.</p>
 
-<h2>5. 아동</h2>
-<p>앱은 만 13세 미만 아동을 주 대상으로 하지 않습니다. 개발자는 아동의 개인정보를 알면서 모으지 않습니다.</p>
-
-<h2>6. 이용자의 권리와 문의</h2>
-<p>이용자는 개인정보 열람, 정정, 삭제, 처리 정지를 요구할 수 있습니다. 개발자는 직접 보관하는 개인정보가 없으므로, 광고 정보는 위 3번의 기기 설정이나 Google을 통해 관리할 수 있습니다. 질문은 아래로 보내 주세요.</p>
+<h2>9. 이용자의 권리와 문의</h2>
+<p>이용자는 적용되는 법령에 따라 개인정보 열람, 정정, 삭제, 처리 정지 및 동의 철회를 요청할 수 있습니다. 앱에는 계정이나 앱 내 서버 기록 삭제 기능이 없습니다. 문의 시 요청의 범위와 기록 식별 가능성을 확인하고, 개발자가 처리할 수 있는 조치 및 Google·Apple 등 제공자의 절차를 안내합니다. 지원 이메일로 직접 보낸 연락처와 문의 내용은 문의 대응을 위해 처리합니다.</p>
 <p><strong>개인정보 보호 담당:</strong> Mungmung Games<br>
 <strong>이메일:</strong> <a href="mailto:mungmunggames.dev@gmail.com">mungmunggames.dev@gmail.com</a></p>
 
-<h2>7. 방침 변경</h2>
+<h2>10. 방침 변경</h2>
 <p>방침이 바뀌면 이 페이지에 새 시행일과 함께 올립니다.</p>
 </section>
 
@@ -71,50 +86,65 @@
 
 <section id="en" lang="en">
 <h1>Privacy Policy</h1>
-<p class="meta">Effective date: November 11, 2026</p>
-<p>Mungmung Games ("we") makes the mobile game <strong>Stack Bloom</strong> (the "App"). This policy explains what information the App handles, why, and what choices you have.</p>
+<p class="meta">Effective date: November 15, 2026</p>
+<p>Mungmung Games ("we") makes the mobile game <strong>Stack Bloom</strong> (the "App"). This policy explains local game data, information processed for analytics, ads and purchases, and your choices.</p>
 
-<h2>1. Information we collect</h2>
-<p>We do not collect your personal information. The App has no account, login or payment.</p>
-<p>The App stores the following game data <strong>only on your device</strong>. It is never sent to us.</p>
+<h2>1. Using the App and local data</h2>
+<p>The App has no registration or login. Our App does not collect account email addresses or names, or raw payment details such as card numbers. However, installation identifiers, usage statistics, advertising and purchase information described below are processed; this is not a claim that all data is fully anonymous or that no data is collected.</p>
+<p>Game progress, challenge records, badges, item counts, settings and the remove-ads entitlement are stored on your device. We do not automatically synchronize your entire game save to the cloud, but some progress and gameplay statistics are sent to the analytics service below.</p>
+
+<h2>2. Firebase Analytics: game analytics</h2>
+<p>We use Google Analytics for Firebase (Google LLC; Firebase Unity SDK 14.1.0; iOS Analytics SDK 13.1.1) to improve difficulty balance and game quality. This is separate from AdMob processing for advertising.</p>
 <ul>
-<li>Level reached, daily challenge record, badge count</li>
-<li>Item counts and whether free items were granted</li>
-<li>Settings (such as reduced effects)</li>
+<li><strong>Gameplay statistics:</strong> level starts, completions, failures and quits; game mode and level; play duration, move counts, level reached, attempts/retries, goal progress and stars, booster holdings/use, and rewarded-ad outcomes.</li>
+<li><strong>Environment and SDK information:</strong> test/release build channel (test/live), app instance ID (installation identifier), app version, device and OS information, sessions/app interactions, and approximate location derived from an IP address. The SDK may also process automatic purchase events.</li>
+</ul>
+<p>The app instance ID is an analytics installation identifier, not an advertising ID. Android advertising ID collection is disabled for Firebase Analytics, and consent mode always sets <code>ad_storage</code>, <code>ad_user_data</code> and <code>ad_personalization</code> to denied. Our Analytics and AdMob accounts are not linked. These restrictions do not stop processing by the separate AdMob advertising SDK.</p>
+<p>The App does not use Firebase Crashlytics or Remote Config, or collect precise GPS location.</p>
+
+<h2>3. AdMob: rewarded and interstitial ads</h2>
+<p>The App uses Google AdMob for optional rewarded ads and interstitial ads shown under certain conditions when leaving a completed level. The advertising SDK may process information when requesting or preloading ads, not only when you watch them.</p>
+<ul>
+<li>Advertising identifiers (Android Advertising ID; iOS IDFA when permitted)</li>
+<li>IP address and approximate location derived from it; app, device and OS information</li>
+<li>App interactions such as ad impressions, views and clicks, and diagnostics</li>
+</ul>
+<p><strong>Purposes:</strong> serving ads, measuring and analyzing ad performance, and preventing fraud. Personalized advertising and advertising identifier use depend on required consent and platform settings. IDFA is not used if you decline tracking on iOS.</p>
+
+<h2>4. Remove-ads purchase</h2>
+<p>You can purchase a paid, non-consumable "Remove Ads" product through Unity IAP on the Apple App Store or Google Play. It removes interstitial ads; optional rewarded ads remain available.</p>
+<p>The store and purchasing SDK process product IDs, transaction/receipt information and purchase status to complete and restore purchases. The App processes this information on your device to grant or restore the entitlement; receipts are not sent to a separate developer server for validation. The store handles payment, so our App does not receive account email addresses or names, or raw card details. Automatic purchase events processed by the Firebase SDK are covered by the analytics section above.</p>
+
+<h2>5. Consent and choices</h2>
+<ul>
+<li><strong>Send play statistics:</strong> the App's "통계 전송" (send play statistics) setting is on by default. Turning it off stops Firebase Analytics collection without limiting game features. It does not disable the advertising SDK or store purchase processing.</li>
+<li><strong>Regional consent:</strong> following Google UMP's consent check at startup, only <code>analytics_storage</code> may be granted according to region and consent status. Where GDPR applies, permission requires consent to device storage/access and to Google. Storage is not granted when the consent status cannot be determined.</li>
+<li><strong>Storage consent versus collection:</strong> denying <code>analytics_storage</code> limits storage of analytics identifiers through consent mode. It is not the same as switching off send play statistics, and denial alone does not guarantee zero network transmissions.</li>
+<li><strong>Ad consent:</strong> UMP presents a consent form where required. Your choices may restrict ad requests or allow limited ads; declining consent does not guarantee that non-personalized ads will always be shown.</li>
+<li><strong>Device settings:</strong> manage advertising identifiers through iOS tracking settings or Android privacy settings, including Advertising ID reset/deletion where available. Contact us below with questions about ad choices or changing consent.</li>
 </ul>
 
-<h2>2. Ads and third parties</h2>
-<p>The App shows rewarded ads through Google AdMob (Google LLC). When you watch an ad, Google may process:</p>
-<ul>
-<li>Advertising identifiers (Android Advertising ID; iOS IDFA if you allow tracking)</li>
-<li>IP address and approximate location derived from it</li>
-<li>Device information such as model, OS and app version</li>
-<li>Ad impressions, views and clicks</li>
-</ul>
-<p><strong>Purposes:</strong> serving ads, measuring ad performance, preventing fraud and, with your consent, personalized ads.</p>
-<p><strong>International transfer:</strong> this information is sent to and processed on Google's servers, including in the United States. Retention follows Google's policies.<br>
-<a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from partner apps</a></p>
+<h2>6. Retention and deletion</h2>
+<p>Firebase Analytics retention for user- and event-level data is set to <strong>14 months</strong>, with the user-data retention period reset on new activity. Retention for aggregate reports may differ. Advertising data and store purchase/receipt records follow the respective providers' separate retention policies.</p>
+<p>Uninstalling the App can remove local App data, but platform backups or purchase restoration may restore some information. Turning off statistics or uninstalling does not immediately delete analytics/ad records already sent or store transaction records. Contact us below about deletion or other rights; we will explain available actions and provider procedures.</p>
 
-<h2>3. Consent and choices</h2>
+<h2>7. Service providers, international processing and security</h2>
+<p>Google processes Firebase Analytics and AdMob information; Apple and Google process payments and purchase restoration through their respective app stores. Unity IAP connects the App to store purchasing services. Relevant information may be transferred to and processed on servers outside your country, including in the United States. Encrypted connections such as TLS are used in transit. See each provider's policy for its processing and retention practices.</p>
 <ul>
-<li>Users in the EEA, the UK and Switzerland see a consent form on first launch. Without consent, only non-personalized ads are shown.</li>
-<li>On iOS the App asks for tracking permission. If you decline, the advertising identifier is not used.</li>
-<li>On Android you can reset or delete your Advertising ID in Settings &gt; Privacy &gt; Ads.</li>
-<li>Ads play only when you tap a button. You can play the game without watching ads.</li>
+<li><a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from partner apps</a></li>
+<li><a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
+<li><a href="https://unity.com/legal/privacy-policy">Unity Privacy Policy</a></li>
 </ul>
 
-<h2>4. Retention and deletion</h2>
-<p>Game data on your device is deleted when you uninstall the App. We keep no copy. Information processed by Google is kept and deleted under Google's policies.</p>
+<h2>8. Children</h2>
+<p>The App is not directed at children under 13. Contact us below if you have concerns or questions about processing children's information.</p>
 
-<h2>5. Children</h2>
-<p>The App is not directed at children under 13. We do not knowingly collect personal information from children.</p>
-
-<h2>6. Your rights and contact</h2>
-<p>You may ask to access, correct, delete or stop the processing of your personal information. We hold none directly; ad information can be managed through the device settings in section 3 or through Google. Send questions to:</p>
+<h2>9. Your rights and contact</h2>
+<p>Subject to applicable law, you may request access, correction, deletion, restriction of processing or withdrawal of consent. The App has no account or in-app feature for deleting server records. We will review the scope of a request and whether relevant records can be identified, then explain actions available to us and the procedures of providers such as Google and Apple. Contact details and messages you voluntarily send to our support email are processed to respond to your inquiry.</p>
 <p><strong>Contact:</strong> Mungmung Games<br>
 <strong>Email:</strong> <a href="mailto:mungmunggames.dev@gmail.com">mungmunggames.dev@gmail.com</a></p>
 
-<h2>7. Changes</h2>
+<h2>10. Changes</h2>
 <p>We post any change on this page with a new effective date.</p>
 </section>
 </main>
