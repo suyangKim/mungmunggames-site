@@ -1,3 +1,2 @@
-# Mungmung Games — app-ads.txt
-# Add the line AdMob shows for this account (AdMob > Apps > app-ads.txt), e.g.:
-# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+# Mungmung Games — app-ads.txt (one line per ad network account; shared by every game)
+google.com, pub-1141728280392535, DIRECT, f08c47fec0942fa0
