@@ -54,7 +54,7 @@
 <li><strong>통계 전송:</strong> 앱 설정의 "통계 전송"은 기본값이 켜짐이며, 언제든 끄면 Firebase Analytics 수집을 중단합니다. 꺼도 게임 기능에 불이익이 없습니다. 이 스위치는 광고 SDK나 스토어 구매 처리를 끄는 기능은 아닙니다.</li>
 <li><strong>지역별 동의:</strong> 앱 시작 시 Google UMP의 동의 확인 절차 후 지역 및 동의 상태에 따라 <code>analytics_storage</code>만 허용할 수 있습니다. GDPR 적용 지역에서는 기기 저장·접근 목적과 Google에 대한 동의가 있어야 허용하며, 동의 상태를 확인하지 못하면 저장을 허용하지 않습니다.</li>
 <li><strong>저장 동의와 수집 중단의 차이:</strong> <code>analytics_storage</code> 거부는 분석 식별자 저장을 제한하는 동의 모드입니다. "통계 전송" 끄기와 같지 않으며, 저장 동의 거부만으로 모든 네트워크 전송이 0이 된다고 보장하지 않습니다.</li>
-<li><strong>광고 동의:</strong> 필요한 지역에서는 UMP 동의 화면이 제공됩니다. 선택에 따라 광고 요청이 제한되거나 제한된 광고가 제공될 수 있으며, 거부하면 항상 비맞춤형 광고가 나온다고 보장하지 않습니다.</li>
+<li><strong>광고 동의:</strong> 필요한 지역에서는 UMP 동의 화면이 제공되며, 이후에도 앱 설정의 [개인정보] 버튼으로 선택을 다시 바꿀 수 있습니다. 선택에 따라 광고 요청이 제한되거나 제한된 광고가 제공될 수 있으며, 거부하면 항상 비맞춤형 광고가 나온다고 보장하지 않습니다.</li>
 <li><strong>기기 설정:</strong> iOS의 추적 허용 설정과 Android의 광고 ID 재설정·삭제 등 플랫폼 개인정보 설정으로 광고 식별자 사용을 관리할 수 있습니다. 광고 관련 선택이나 동의 변경에 관한 문의는 아래 이메일로 보내 주세요.</li>
 </ul>
 
@@ -120,7 +120,7 @@
 <li><strong>Send play statistics:</strong> the App's "통계 전송" (send play statistics) setting is on by default. Turning it off stops Firebase Analytics collection without limiting game features. It does not disable the advertising SDK or store purchase processing.</li>
 <li><strong>Regional consent:</strong> following Google UMP's consent check at startup, only <code>analytics_storage</code> may be granted according to region and consent status. Where GDPR applies, permission requires consent to device storage/access and to Google. Storage is not granted when the consent status cannot be determined.</li>
 <li><strong>Storage consent versus collection:</strong> denying <code>analytics_storage</code> limits storage of analytics identifiers through consent mode. It is not the same as switching off send play statistics, and denial alone does not guarantee zero network transmissions.</li>
-<li><strong>Ad consent:</strong> UMP presents a consent form where required. Your choices may restrict ad requests or allow limited ads; declining consent does not guarantee that non-personalized ads will always be shown.</li>
+<li><strong>Ad consent:</strong> UMP presents a consent form where required, and you can change your choices later with the [Privacy] button in the App's settings. Your choices may restrict ad requests or allow limited ads; declining consent does not guarantee that non-personalized ads will always be shown.</li>
 <li><strong>Device settings:</strong> manage advertising identifiers through iOS tracking settings or Android privacy settings, including Advertising ID reset/deletion where available. Contact us below with questions about ad choices or changing consent.</li>
 </ul>
 
