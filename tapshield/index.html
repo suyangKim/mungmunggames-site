@@ -15,7 +15,7 @@
 <div class="wrap">
 <header class="top">
   <a class="brand" href="../"><span class="mark"><svg viewBox="0 0 64 64" aria-hidden="true"><g fill="currentColor"><ellipse cx="13" cy="30" rx="6" ry="8" transform="rotate(-22 13 30)"/><ellipse cx="24" cy="17" rx="6.2" ry="8.4" transform="rotate(-8 24 17)"/><ellipse cx="40" cy="17" rx="6.2" ry="8.4" transform="rotate(8 40 17)"/><ellipse cx="51" cy="30" rx="6" ry="8" transform="rotate(22 51 30)"/><path d="M32 31c-8.5 0-16 8.6-16 16.4 0 5.6 4.4 8 8.6 6.9 2.8-.7 4.8-1.9 7.4-1.9s4.6 1.2 7.4 1.9c4.2 1.1 8.6-1.3 8.6-6.9C48 39.6 40.5 31 32 31z"/></g></svg></span>Mungmung Games</a>
-  <nav><a href="#support">지원</a><a href="privacy.html">개인정보</a></nav>
+  <nav><a href="#support">지원</a><a href="privacy.html">개인정보</a><a href="privacy.html#privacy-choices">개인정보 선택</a></nav>
 </header>
 
 <section class="hero">
@@ -62,22 +62,24 @@
 <section id="support">
   <h2 class="section">지원 · Support</h2>
   <div class="card">
-    <p>질문, 버그 제보, 구매 복원, 개인정보 문의는 이메일로 보내 주세요. 기기 종류와 작전 번호를 함께 적어 주시면 빨리 확인할 수 있습니다.<br>
-    <span class="en">Email us with your device model and stage number.</span></p>
+    <p>질문, 버그 제보, 구매 기능 및 개인정보·삭제 요청은 이메일로 보내 주세요. 앱 버전, 기기 종류, 작전 번호는 문제 확인에 도움이 됩니다. 이메일 주소와 자발적으로 보낸 로그·스크린샷 등은 문의 처리에 사용하므로 불필요한 민감 정보는 보내지 마세요.<br>
+    <span class="en">Email us about bugs, purchase features, privacy or deletion requests. App version, device model and stage number help us investigate. We use your email and voluntarily supplied logs or screenshots to handle your inquiry; do not send unnecessary sensitive information.</span></p>
     <p class="mail">✉️ <a href="mailto:mungmunggames.dev@gmail.com?subject=TapShield">mungmunggames.dev@gmail.com</a></p>
   </div>
 
   <div class="card flat faq">
     <details open><summary>진행 기록은 어디에 저장되나요?</summary>
-      <p>기기 안에만 저장됩니다. 앱을 지우면 기록도 지워집니다.<br><span class="en">Only on your device. Uninstalling the app deletes it.</span></p></details>
-    <details><summary>광고 제거를 샀는데 앱을 다시 설치했어요.</summary>
-      <p>설정의 [구매 복원]을 누르면 같은 스토어 계정의 구매가 다시 적용됩니다. 광고 제거는 작전 사이의 자동 전면 광고만 없앱니다. 직접 고르는 보상형 광고는 그대로 남습니다.<br><span class="en">Tap Restore Purchases in Settings. Remove Ads removes automatic interstitials only; optional rewarded ads stay.</span></p></details>
+      <p>게임 진행 기록은 앱의 localStorage에 저장되며 개발자의 게임 서버로 전송하지 않습니다. Android 등 운영체제 백업 설정에 따라 백업·복원될 수 있습니다. 앱 데이터 지우기·삭제와 백업 관리는 별개입니다. 광고 SDK의 정보 처리는 <a href="privacy.html">개인정보처리방침</a>을 확인하세요.<br><span class="en">Game progress is stored in localStorage, not sent to a developer game server. OS backup settings, including Android backup, may allow backup and restoration. Clearing or uninstalling the App and managing backups are separate steps. See the <a href="privacy.html#en">privacy policy</a> for advertising SDK processing.</span></p></details>
+    <details><summary>광고 제거 구매와 복원을 지원하나요?</summary>
+      <p>현재 확인한 구현은 구매 시뮬레이션이며 실제 스토어 결제·복원은 아직 연결되어 있지 않습니다. 향후 실제 구매 지원 버전이 출시되면 해당 스토어 설명과 앱 안내에서 상품 및 복원 방법을 확인하세요. 예정된 광고 제거 상품은 자동 전면 광고 대상이며, 선택형 보상 광고와는 별개입니다.<br><span class="en">The currently reviewed implementation simulates purchases; real store billing and restoration are not yet connected. If a purchase-enabled version is released, check its store listing and in-App restoration instructions. The planned Remove Ads product concerns automatic interstitials, not optional rewarded ads.</span></p></details>
+    <details><summary>광고 선택이나 개인정보 삭제는 어떻게 요청하나요?</summary>
+      <p>선택 화면은 출시 버전·플랫폼·지역에 따라 다르며 모든 기존 버전에 새 동의 메뉴가 있는 것은 아닙니다. <a href="privacy.html#privacy-choices">개인정보 선택 안내</a>와 <a href="privacy.html#contact">삭제·문의 연락처</a>를 확인하세요. 현재 앱은 Firebase 게임플레이 이벤트를 전송하지 않으며 통계 OFF 스위치도 없습니다.<br><span class="en">Controls vary by released version, platform and region; new consent menus are not available in every older version. See <a href="privacy.html#privacy-choices-en">privacy choices</a> and the <a href="privacy.html#contact-en">deletion/contact details</a>. The current App does not send Firebase gameplay events and has no Analytics OFF switch.</span></p></details>
     <details><summary>돈을 쓰면 더 강해지나요?</summary>
       <p>아니요. 모든 작전, 코어, 모듈은 플레이로만 해금됩니다.<br><span class="en">No. Everything unlocks through play.</span></p></details>
   </div>
 </section>
 
-<footer><a href="privacy.html">개인정보처리방침 · Privacy Policy</a> · © 2026 Mungmung Games</footer>
+<footer><a href="privacy.html">개인정보처리방침 · Privacy Policy</a> · <a href="privacy.html#privacy-choices">개인정보 선택</a> · <a href="privacy.html#privacy-choices-en">Privacy choices</a> · © 2026 Mungmung Games</footer>
 </div>
 <dialog class="lightbox"><img src="" alt=""><p></p></dialog>
 <script src="../gallery.js" defer></script>

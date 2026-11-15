@@ -21,110 +21,122 @@
 
 <section id="ko">
 <h1>개인정보처리방침</h1>
-<p class="meta">시행일: 2026년 11월 11일</p>
-<p>Mungmung Games(이하 "개발자")는 모바일 게임 <strong>TapShield</strong>(이하 "앱")를 만들고 운영합니다. 이 방침은 앱이 어떤 정보를 다루는지, 왜 다루는지, 이용자가 무엇을 할 수 있는지 설명합니다.</p>
+<p class="meta">시행일: 2026년 11월 15일</p>
+<p>Mungmung Games(이하 "개발자")는 모바일 게임 <strong>TapShield</strong>(이하 "앱")를 만들고 운영합니다. 이 방침은 기기 내 게임 기록, 지원 문의, Google 광고 서비스의 정보 처리를 구분하여 설명합니다. 앱 이용에 회원가입이나 로그인이 필요하지 않으며 개발자의 자체 게임 서버는 없습니다. 기능과 개인정보 선택 화면의 제공 여부는 앱 출시 버전, 플랫폼, 지역에 따라 다를 수 있습니다.</p>
 
-<h2>1. 개발자가 직접 모으는 정보</h2>
-<p>개발자는 이용자의 개인정보를 직접 모으지 않습니다. 앱에는 회원가입, 로그인, 자체 게임 서버가 없습니다.</p>
-<p>앱은 다음 게임 데이터를 <strong>이용자 기기 안에만</strong> 저장합니다. 이 데이터는 개발자에게 전송되지 않습니다.</p>
-<ul>
-<li>캠페인 진행도, 획득한 별, 해금한 코어와 모듈, 최고 점수</li>
-<li>오디오와 진동 설정</li>
-<li>광고 제거 구매 여부</li>
-</ul>
+<h2>1. 기기 내 진행 기록과 지원 문의</h2>
+<p>캠페인 진행도, 별, 해금한 코어와 모듈, 최고 점수, 오디오·진동 설정 등은 앱의 <code>localStorage</code>에 저장됩니다. 앱은 이 진행 기록을 개발자의 게임 서버로 전송하지 않습니다. 다만 Android 등 운영체제의 백업 설정에 따라 앱 데이터가 백업·복원될 수 있으므로, 모든 데이터가 기기에만 남는다고 보장하지는 않습니다.</p>
+<p>이메일로 문의하면 이메일 주소, 이름 등 연락처와 이용자가 자발적으로 제공한 기기 정보, 작전 번호, 스크린샷, 오류·플레이 로그를 개발자가 받습니다. 이 정보는 문의 답변, 문제 재현·해결, 개인정보 요청 처리에 사용합니다. 문의에 비밀번호, 결제 카드 정보 등 불필요한 민감 정보를 보내지 마세요.</p>
 
-<h2>2. 광고와 제3자가 처리하는 정보</h2>
-<p>앱은 Google AdMob(Google LLC)으로 보상형 광고와 전면 광고를 보여 줍니다. 광고가 나오면 Google이 다음 정보를 처리할 수 있습니다.</p>
+<h2>2. 광고와 Google의 정보 처리</h2>
+<p>앱에는 Google AdMob 광고 SDK가 포함되어 있습니다. 현재 확인한 빌드에는 테스트 광고 ID가 설정되어 있으며, 실제 광고 제공은 출시 버전과 설정에 따라 달라집니다. SDK는 <strong>광고가 화면에 표시될 때뿐 아니라 SDK 초기화, 광고 요청·미리 불러오기 단계에도</strong> 정보를 처리할 수 있습니다. 아래 항목은 SDK가 처리할 수 있는 정보 유형이며, 모든 항목이 매 실행에서 전송된다는 뜻은 아닙니다.</p>
 <ul>
-<li>광고 식별자(Android 광고 ID, iOS IDFA — 이용자가 허용한 경우)</li>
+<li>광고 식별자 등 기기 식별자(Android 광고 ID, 추적을 허용한 경우의 iOS IDFA 등)</li>
 <li>IP 주소와 이를 바탕으로 한 대략적인 위치</li>
-<li>기기 종류, 운영체제, 언어, 앱 버전 같은 기기 정보</li>
-<li>광고 노출·시청·클릭 기록</li>
+<li>기기 종류, 운영체제, 언어, 앱 버전 등 기기·앱 정보</li>
+<li>광고 노출·시청·클릭과 앱·제품 상호작용 정보</li>
+<li>비정상 종료, 성능 및 기타 진단 정보</li>
 </ul>
-<p><strong>목적:</strong> 광고 제공, 광고 횟수 제한, 보상 지급 확인, 광고 성과 측정, 부정 사용 방지, (동의한 경우) 맞춤형 광고.</p>
-<p><strong>국외 이전:</strong> 이 정보는 Google의 서버(미국 등)로 전송되어 처리됩니다. 처리와 보관 기간은 Google의 정책을 따릅니다.<br>
+<p><strong>목적:</strong> 광고 제공, 광고 횟수 제한, 보상 확인, 광고·서비스 성과 측정, 안정성 개선, 부정 사용 방지, 관련 동의와 설정이 허용하는 경우의 맞춤형 광고입니다.</p>
+<p><strong>Google 처리와 국외 이전:</strong> Google LLC 및 관련 서비스 제공자가 이 정보를 미국 등 이용자의 거주 국가 밖 서버에서 처리할 수 있습니다. Google의 처리 방식, 보관 및 권리 행사 방법은 다음 공식 안내를 확인하세요.<br>
 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a> · <a href="https://policies.google.com/technologies/partner-sites">Google이 파트너 앱의 정보를 사용하는 방법</a></p>
 
-<h2>3. 인앱 구매</h2>
-<p>앱은 "자동 전면 광고 영구 제거" 상품 1개를 판매합니다. 결제는 Google Play 또는 Apple App Store가 처리합니다. 개발자는 카드 번호 같은 결제 정보를 받지 않습니다. 앱은 스토어가 알려 주는 구매 확인 결과만 받아 기기에 저장합니다.<br>
+<h2>3. Firebase Analytics의 현재 상태와 향후 변경</h2>
+<p><strong>현재 앱에는 Firebase Analytics SDK가 연결되어 있지 않으며, Firebase로 게임플레이 이벤트를 전송하지 않습니다.</strong> Firebase 프로젝트에 Google Analytics 4(GA4)가 연결되어 있고 이벤트 및 사용자 데이터 보관 설정은 14개월이지만, 프로젝트 설정만으로 앱 SDK나 이벤트 전송이 활성화되지는 않습니다. 이 14개월은 해당 Firebase Analytics/GA4 설정에만 해당하며 AdMob, 지원 이메일 또는 기기 내 기록의 공통 보관 기간이 아닙니다.</p>
+<p>현재 앱에는 통계 수집을 끄는 Analytics OFF 스위치가 없습니다. 향후 Firebase Analytics를 사용하는 버전을 출시한다면 활성화 전에 이 방침에서 수집 항목·목적·보관과 이용자 선택 방법을 안내하고 필요한 선택·동의 절차를 제공합니다. 이 설명은 현재 분석 기능이나 설정 스위치가 이미 구현되어 있다는 뜻이 아닙니다.</p>
+
+<h2>4. 인앱 구매</h2>
+<p>현재 확인한 구현은 구매 시뮬레이션 단계이며 실제 Google Play·Apple App Store 네이티브 결제 및 구매 복원이 연결되어 있지 않습니다. 구매 또는 복원 버튼이 보이더라도 실제 결제·복원이 지원된다고 가정하지 마세요.</p>
+<p>향후 실제 구매를 지원하는 출시 버전에서는 해당 스토어가 결제를 처리하며 개발자는 카드 번호 같은 결제 정보를 받지 않습니다. 구매 확인·복원 결과와 광고 제거 권한을 앱에서 처리할 수 있습니다. 상품 제공 여부와 복원 방법은 해당 출시 버전의 스토어 설명과 앱 안내를 확인하세요.<br>
 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a> · <a href="https://www.apple.com/legal/privacy/">Apple 개인정보처리방침</a></p>
 
-<h2>4. 동의와 선택</h2>
+<h2 id="privacy-choices">5. 개인정보 선택과 동의 철회</h2>
 <ul>
-<li>유럽경제지역(EEA), 영국, 스위스 이용자에게는 앱을 처음 실행할 때 광고 동의 화면이 나옵니다. 동의하지 않으면 비맞춤형 광고가 나옵니다.</li>
-<li>iOS에서는 앱 추적 허용 여부를 묻습니다. 허용하지 않아도 게임의 모든 기능을 쓸 수 있습니다.</li>
-<li>Android에서는 기기 설정 &gt; Google &gt; 광고에서 광고 ID를 재설정하거나 삭제할 수 있습니다.</li>
-<li>보상형 광고는 이용자가 버튼을 눌렀을 때만 나옵니다.</li>
+<li>광고 동의 화면과 설정의 개인정보 선택 메뉴는 출시 버전·플랫폼·지역에 따라 제공 여부가 다릅니다. 동의·선택 기능을 보완하는 업데이트가 준비 중이며, 새 네이티브 빌드의 검증·배포는 아직 완료되지 않았습니다. 모든 기존 버전에 첫 실행 UMP 동의 화면이나 설정 메뉴가 있다고 보장하지 않습니다.</li>
+<li>개인정보 선택 메뉴가 제공되는 버전에서는 앱 설정에서 메뉴를 열어 광고 관련 선택을 검토·변경하거나 가능한 동의를 철회할 수 있습니다. 제공되지 않거나 찾을 수 없으면 <a href="#contact">아래 연락처</a>로 앱 버전과 지역을 알려 주세요. 동의 거부 시 광고가 제한되거나 제공되지 않을 수 있으며, 항상 비맞춤형 광고가 나온다고 보장하지 않습니다. 비맞춤형 광고도 식별자·진단 정보 등의 처리가 전혀 없다는 뜻은 아닙니다.</li>
+<li>iOS의 추적 권한 요청이 제공되는 경우 허용 여부를 선택하고, 기기 설정 &gt; 개인정보 보호 및 보안 &gt; 추적에서 변경할 수 있습니다. 추적을 허용하지 않으면 IDFA 사용이 제한되지만 모든 SDK 정보 처리가 중단되는 것은 아닙니다.</li>
+<li>Android의 광고 관련 기기 설정에서 광고 ID를 재설정·삭제하거나 제공되는 광고 개인정보 옵션을 관리할 수 있습니다. 메뉴와 지원 기능은 운영체제 버전에 따라 다릅니다.</li>
+<li>보상형 광고 표시는 이용자가 선택하는 방식입니다. 다만 광고 표시를 선택하기 전에도 SDK 초기화나 광고 미리 불러오기가 이루어질 수 있습니다.</li>
+<li>앱 사용 중단·삭제는 이후 앱의 정보 전송을 중단하는 방법이지만, Google이 이미 보유한 기록을 자동으로 삭제하지는 않습니다. Google 관련 권리 행사 방법은 위 공식 정책을 확인하고, 개발자가 보유한 문의 정보의 삭제 등은 <a href="#contact">이메일</a>로 요청하세요.</li>
 </ul>
 
-<h2>5. 보관과 삭제</h2>
-<p>기기 안의 게임 데이터는 앱을 삭제하거나 앱 데이터를 지우면 함께 지워집니다. 개발자는 이 데이터를 따로 보관하지 않습니다. 광고 제거 구매 기록은 스토어 계정에 남으므로 [구매 복원]으로 다시 적용할 수 있습니다.</p>
+<h2>6. 보관과 삭제</h2>
+<p><strong>기기 내 기록:</strong> 앱 데이터 지우기 또는 앱 삭제로 기기에 저장된 기록을 삭제할 수 있습니다. 운영체제 백업에 남은 사본이 재설치 시 복원될 수 있으므로 백업도 기기·운영체제 설정에서 별도로 관리하세요. 개발자는 별도의 게임 진행 기록 사본을 보관하지 않습니다.</p>
+<p><strong>지원 문의:</strong> 받은 이메일과 첨부 자료는 문의 해결, 후속 대응 및 적용되는 법적 의무에 필요한 범위와 기간 동안만 보관하며, 더 이상 필요하지 않으면 삭제합니다. 삭제·열람 요청은 아래 이메일로 보내 주세요.</p>
+<p><strong>Google 및 스토어:</strong> 광고·진단 정보와 향후 실제 구매 기록은 해당 제공자의 정책 및 법적 의무에 따라 보관됩니다. 앱 삭제, 광고 선택 변경 또는 광고 ID 삭제로 과거 기록까지 모두 지워지는 것은 아닙니다. 개발자가 Google·스토어의 모든 기록을 직접 찾아 삭제할 수 있는 것은 아닙니다. Firebase/GA4의 14개월 설정을 이 데이터에 적용하지 않습니다.</p>
 
-<h2>6. 아동</h2>
-<p>앱은 만 13세 미만 아동을 주 대상으로 하지 않습니다. 개발자는 아동의 개인정보를 알면서 모으지 않습니다. 광고 요청에는 연령에 맞는 광고 등급 제한을 적용합니다.</p>
+<h2>7. 아동</h2>
+<p>앱은 만 13세 미만 아동을 주 대상으로 하지 않습니다. 개발자는 아동의 개인정보를 알면서 수집하지 않습니다. 아동이 지원 문의 등에 개인정보를 제공했다고 생각되면 아래 연락처로 알려 주세요.</p>
 
-<h2>7. 이용자의 권리와 문의</h2>
-<p>이용자는 개인정보 열람, 정정, 삭제, 처리 정지를 요구할 수 있습니다. 개발자는 직접 보관하는 개인정보가 없으므로, 광고 정보는 위 4번의 기기 설정이나 Google을 통해 관리할 수 있습니다. 질문은 아래로 보내 주세요.</p>
+<h2 id="contact">8. 이용자의 권리와 연락처</h2>
+<p>적용되는 법률에 따라 개인정보 열람, 정정, 삭제, 처리 제한, 동의 철회 등을 요청할 수 있습니다. 개발자가 받은 문의 정보에 대한 요청이나 개인정보 선택 화면 이용 문의는 아래 이메일로 보내 주세요. 앱 버전·플랫폼·지역과 요청 내용을 알려 주되 불필요한 민감 정보는 보내지 마세요. 개발자가 관리하지 않는 Google·스토어 정보는 해당 제공자의 절차를 안내할 수 있으나 삭제를 보장할 수는 없습니다. 앱은 계정을 만들지 않으므로 삭제할 앱 계정은 없지만, 지원 문의 정보에 대한 요청은 가능합니다.</p>
 <p><strong>개인정보 보호 담당:</strong> Mungmung Games<br>
-<strong>이메일:</strong> <a href="mailto:mungmunggames.dev@gmail.com">mungmunggames.dev@gmail.com</a></p>
+<strong>이메일:</strong> <a href="mailto:mungmunggames.dev@gmail.com?subject=TapShield%20Privacy">mungmunggames.dev@gmail.com</a><br>
+<a href="#privacy-choices">개인정보 선택 안내</a> · <a href="#privacy-choices-en">Privacy choices in English</a></p>
 
-<h2>8. 방침 변경</h2>
-<p>방침이 바뀌면 이 페이지에 새 시행일과 함께 올립니다.</p>
+<h2>9. 방침 변경</h2>
+<p>정보 처리나 선택 방법이 바뀌면 이 페이지에 새 시행일과 함께 안내합니다. 이 방침의 게시만으로 새 앱 기능의 배포가 완료되는 것은 아닙니다.</p>
 </section>
 
 <hr>
 
 <section id="en" lang="en">
 <h1>Privacy Policy</h1>
-<p class="meta">Effective date: November 11, 2026</p>
-<p>Mungmung Games ("we") makes the mobile game <strong>TapShield</strong> (the "App"). This policy explains what information the App handles, why, and what choices you have.</p>
+<p class="meta">Effective date: November 15, 2026</p>
+<p>Mungmung Games ("we") makes the mobile game <strong>TapShield</strong> (the "App"). This policy distinguishes local game records, support inquiries and Google's advertising data processing. No account or login is required, and we do not operate a game server. Features and privacy controls may vary by released App version, platform and region.</p>
 
-<h2>1. Information we collect</h2>
-<p>We do not collect your personal information. The App has no account, login or game server.</p>
-<p>The App stores the following game data <strong>only on your device</strong>. It is never sent to us.</p>
-<ul>
-<li>Campaign progress, stars, unlocked cores and modules, high scores</li>
-<li>Audio and vibration settings</li>
-<li>Whether Remove Ads was purchased</li>
-</ul>
+<h2>1. Local progress and support inquiries</h2>
+<p>Campaign progress, stars, unlocked cores and modules, high scores, and audio and vibration settings are stored in the App's <code>localStorage</code>. The App does not send these progress records to a developer-operated game server. However, operating-system backup settings, including Android backup, may allow App data to be backed up and restored, so we do not guarantee that all data stays exclusively on the device.</p>
+<p>If you contact us by email, we receive your email address, any name or other contact details, and device information, stage numbers, screenshots, error or gameplay logs that you voluntarily provide. We use this information to answer inquiries, reproduce and resolve problems, and handle privacy requests. Do not send passwords, payment card details or other unnecessary sensitive information.</p>
 
-<h2>2. Ads and third parties</h2>
-<p>The App shows rewarded and interstitial ads through Google AdMob (Google LLC). When an ad is shown, Google may process:</p>
+<h2>2. Advertising and Google's processing</h2>
+<p>The App includes the Google AdMob advertising SDK. The builds currently reviewed use test ad IDs; actual ad availability depends on the released version and configuration. The SDK may process information <strong>during SDK initialization, ad requests and preloading, not only when an ad is displayed</strong>. The following are categories the SDK can process, not a statement that every category is sent on every launch:</p>
 <ul>
-<li>Advertising identifiers (Android Advertising ID; iOS IDFA if you allow tracking)</li>
+<li>Device identifiers, including advertising identifiers (Android Advertising ID and iOS IDFA when tracking is permitted)</li>
 <li>IP address and approximate location derived from it</li>
-<li>Device information such as model, OS, language and app version</li>
-<li>Ad impressions, views and clicks</li>
+<li>Device and App information such as model, operating system, language and App version</li>
+<li>Ad impressions, views and clicks, and App or product interactions</li>
+<li>Crash, performance and other diagnostic information</li>
 </ul>
-<p><strong>Purposes:</strong> serving ads, frequency capping, confirming rewards, measuring ad performance, preventing fraud and, with your consent, personalized ads.</p>
-<p><strong>International transfer:</strong> this information is sent to and processed on Google's servers, including in the United States. Retention follows Google's policies.<br>
+<p><strong>Purposes:</strong> serving ads, frequency capping, confirming rewards, measuring ad and service performance, improving reliability, preventing fraud and, where permitted by applicable consent and settings, personalized advertising.</p>
+<p><strong>Google processing and international transfers:</strong> Google LLC and related service providers may process this information on servers outside your country, including the United States. See these official notices for Google's processing, retention and rights procedures:<br>
 <a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from partner apps</a></p>
 
-<h2>3. In-app purchase</h2>
-<p>The App sells one product, "Remove Forced Interstitials". Google Play or the Apple App Store processes the payment. We never receive payment details such as card numbers. The App only receives the store's purchase confirmation and stores it on your device.<br>
+<h2>3. Current Firebase Analytics status and future changes</h2>
+<p><strong>The current App does not have the Firebase Analytics SDK connected and does not send gameplay events to Firebase.</strong> The Firebase project is linked to Google Analytics 4 (GA4), with event and user data retention set to 14 months. Project settings alone do not activate an App SDK or event transmission. This 14-month setting applies only to that Firebase Analytics/GA4 configuration, not to all AdMob data, support emails or local records.</p>
+<p>The current App has no Analytics OFF switch. Before enabling Firebase Analytics in a future release, we will explain the data, purposes, retention and user choices in this policy and provide the necessary choice and consent process. This does not mean that analytics or a settings toggle is already implemented in the current App.</p>
+
+<h2>4. In-app purchases</h2>
+<p>The implementation currently reviewed simulates purchases; real native Google Play or Apple App Store billing and purchase restoration are not connected. A visible purchase or restore button should not be taken as confirmation that real billing or restoration is supported.</p>
+<p>If a future released version supports real purchases, the store will process payments; we will not receive payment details such as card numbers. The App may process purchase verification or restoration results and the Remove Ads entitlement. Check that release's store listing and in-App instructions for product availability and restoration.<br>
 <a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></p>
 
-<h2>4. Consent and choices</h2>
+<h2 id="privacy-choices-en">5. Privacy choices and withdrawal of consent</h2>
 <ul>
-<li>Users in the EEA, the UK and Switzerland see a consent form on first launch. Without consent, only non-personalized ads are shown.</li>
-<li>On iOS the App asks for tracking permission. Declining does not limit any game feature.</li>
-<li>On Android you can reset or delete your Advertising ID in Settings &gt; Google &gt; Ads.</li>
-<li>Rewarded ads play only when you tap a button.</li>
+<li>Availability of ad consent screens and privacy choices in settings depends on the released version, platform and region. An update to improve consent and choice controls is being prepared; validation and distribution of a new native build are not yet complete. We do not guarantee a first-launch UMP consent screen or settings menu in every older version.</li>
+<li>Where a privacy choices menu is available, open it in App settings to review or change ad choices or withdraw consent where applicable. If it is unavailable or you cannot find it, <a href="#contact-en">contact us below</a> with your App version and region. Refusal may limit ads or make them unavailable; it does not guarantee that non-personalized ads will always be served. Non-personalized ads do not mean that no identifiers or diagnostic information are processed.</li>
+<li>Where an iOS tracking permission request is available, you can choose whether to allow it and change the choice in device Settings &gt; Privacy &amp; Security &gt; Tracking. Declining limits IDFA use but does not stop all SDK data processing.</li>
+<li>Android device advertising settings may let you reset or delete your Advertising ID or manage available ad privacy options. Menus and supported controls vary by operating-system version.</li>
+<li>Displaying a rewarded ad is optional. However, SDK initialization or ad preloading may occur before you choose to display one.</li>
+<li>Stopping use of or uninstalling the App stops future transmissions by the App, but does not automatically delete records Google already holds. See Google's official policies above for its rights procedures, and <a href="#contact-en">email us</a> to request deletion of inquiry information we hold.</li>
 </ul>
 
-<h2>5. Retention and deletion</h2>
-<p>Game data on your device is deleted when you uninstall the App or clear its data. We keep no copy. Your Remove Ads purchase stays with your store account, so Restore Purchases can apply it again.</p>
+<h2>6. Retention and deletion</h2>
+<p><strong>Local records:</strong> clearing App data or uninstalling can remove records stored on your device. Operating-system backup copies may restore data after reinstallation, so manage backups separately in your device or operating-system settings. We do not keep a separate copy of game progress.</p>
+<p><strong>Support inquiries:</strong> we retain received emails and attachments only to the extent and for as long as necessary to resolve inquiries, provide follow-up and meet applicable legal obligations, and delete them when no longer needed. Email the contact below for access or deletion requests.</p>
+<p><strong>Google and stores:</strong> advertising and diagnostic information, and any future real purchase records, are retained under the relevant provider's policies and legal obligations. Uninstalling, changing ad choices or deleting an advertising ID does not erase all historical records. We cannot directly locate and delete every record held by Google or a store. The Firebase/GA4 14-month setting does not apply to this data.</p>
 
-<h2>6. Children</h2>
-<p>The App is not directed at children under 13. We do not knowingly collect personal information from children. Ad requests use age-appropriate content ratings.</p>
+<h2>7. Children</h2>
+<p>The App is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided personal information, including through a support inquiry, please contact us below.</p>
 
-<h2>7. Your rights and contact</h2>
-<p>You may ask to access, correct, delete or stop the processing of your personal information. We hold none directly; ad information can be managed through the device settings in section 4 or through Google. Send questions to:</p>
-<p><strong>Contact:</strong> Mungmung Games<br>
-<strong>Email:</strong> <a href="mailto:mungmunggames.dev@gmail.com">mungmunggames.dev@gmail.com</a></p>
+<h2 id="contact-en">8. Your rights and contact</h2>
+<p>Depending on applicable law, you may request access, correction, deletion, restriction of processing or withdrawal of consent. Email us below about inquiry information we received or help with privacy choices. Include your App version, platform, region and request, but not unnecessary sensitive information. For Google or store information outside our control, we can direct you to the provider's procedures but cannot guarantee deletion. There is no App account to delete because the App does not create accounts; requests about support inquiry information are still available.</p>
+<p><strong>Privacy contact:</strong> Mungmung Games<br>
+<strong>Email:</strong> <a href="mailto:mungmunggames.dev@gmail.com?subject=TapShield%20Privacy">mungmunggames.dev@gmail.com</a><br>
+<a href="#privacy-choices-en">Privacy choices</a> · <a href="#privacy-choices">한국어 개인정보 선택 안내</a></p>
 
-<h2>8. Changes</h2>
-<p>We post any change on this page with a new effective date.</p>
+<h2>9. Changes</h2>
+<p>We will post changes to data processing or choices on this page with a new effective date. Publishing this policy does not itself mean that new App features have been released.</p>
 </section>
 </main>
 <footer>© 2026 Mungmung Games</footer>
